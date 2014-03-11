@@ -8,7 +8,7 @@ html, body {
 body {
 	background-image:url("../images/backgrounds/white_wall_hash.png");
 	min-height:100%;
-	min-width: 800px;
+	min-width: 1024px;
 }
 #container {
 	width: 80%; 
@@ -121,7 +121,7 @@ text1 {
 	padding-bottom:0;
 	font-family:'Archivo Black', sans-serif;
 	color: black;
-	font-size:30pt;
+	font-size: 2.45em;
 	text-align: left;
 	font-weight: 900;
 	text-transform: uppercase;
@@ -146,20 +146,20 @@ text1 a:hover {
 text2{
 	font-family:'Gilda Display', serif;
 	color:black;
-	font-size:20pt;
+	font-size: 1.6em;
 	text-align: center;
 }
 text2.green {
 	color: #617D4B;
 	text-transform: uppercase;
-	font-size: 19pt;
+	font-size: 1em;
 	font-weight: 700;
 	text-decoration: none;	
 }
 text2 a {
 	color: #617D4B;
 	text-transform: uppercase;
-	font-size: 19pt;
+	font-size: 1em;
 	font-weight: 700;
 	text-decoration: none;	
 }
@@ -172,7 +172,7 @@ text2 a:hover {
 text3 {
 	font-family:'corbel';
 	color: #617D4B;
-	font-size: 15pt;
+	font-size: 1.3em;
 	text-align:center;
 	align:center;
 	padding-top:10px;
@@ -180,14 +180,14 @@ text3 {
 text4 {
 	font-family: 'arial', sans-serif;
 	color:#ccc;
-	font-size: 10pt;
+	font-size: .8em;
 	align:center;
 	text-align:center;
 }
 text4 a {
 	font-family: 'arial', sans-serif;
 	color:#ccc;
-	font-size: 10pt;
+	font-size: .8em;
 	align:center;
 	text-align:center;
 	text-decoration:underline;
