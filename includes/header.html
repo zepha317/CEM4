@@ -6,7 +6,7 @@
 </head>
 
 <body><center>
-<a href="http://www.arpcem.com"><img src="../images/logos/CEMlogo.png" width="250px" border="0" style="margin-bottom:15px;"/></a>
+<a href="http://www.arpcem.com"><img src="https://raw.github.com/zepha317/CEM4/master/images/logos/CEMlogo.png" width="250px" border="0" style="margin-bottom:15px;"/></a>
 <div id="contain">
 <ul id="nav"> 
 			<li> 
@@ -131,7 +131,7 @@ var showDropDown = function(object) {
 	var arrow = $(element).contents().find(".imgarrow");
         if(!$(submenu).is(":hidden")) {
             $(submenu).slideUp(400);
-		$(arrow).attr("src","../images/buttons/arrow.png");
+		$(arrow).attr("src","https://raw.github.com/zepha317/CEM4/master/images/buttons/arrow.png");
 
         }
 
@@ -141,7 +141,7 @@ var showDropDown = function(object) {
     if(object != null) {
 	var currentborder = $(object).contents().find(".bottom");
         $(object).children(".sub-menu").delay(250).slideDown(600);
-	$(object).contents().find(".imgarrow").attr("src","../images/buttons/arrowdown.png");
+	$(object).contents().find(".imgarrow").attr("src","https://raw.github.com/zepha317/CEM4/master/images/buttons/arrowdown.png");
 	$(".bottom").delay(250).queue(function(next){
 		$(this).css('border-bottom', '1px solid #617d4b');
 		next();
