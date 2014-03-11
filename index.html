@@ -3,10 +3,22 @@
 <meta name="keywords" content="HTML,CSS,JavaScript">
 <meta name="author" content="Rebecca Duran">
 <meta charset="UTF-8">
+<link rel="stylesheet" href="styles/mobile.css" />
 
 <script type="text/javascript" src="styles/jquery.js" ></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js" ></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" ></script> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" ></script>
+
+
+		
+<link rel="stylesheet" type="text/css" href="ResponsiveMultiLevelMenu/css/component.css" />
+		
+<script src="ResponsiveMultiLevelMenu/js/modernizr.custom.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script src="ResponsiveMultiLevelMenu/js/jquery.dlmenu.js"></script>
+
 
 <script type="text/javascript" src="nivo-slider/jquery.nivo.slider.js" ></script>
 
@@ -34,25 +46,18 @@
 <body style="" >
 
 <script> 
-		$(document).ready(function() {
+	$(document).ready(function() {
    		$('#header').load('includes/header.html');
-	});
-</script>
-<script> 
-		$(document).ready(function() {
-   		$('#footer').load('includes/footer.html');
-	});
-</script>
-<script>
+		$('#header2').load('includes/header2.html');
+		$('#footer').load('includes/footer.html');
+	}); 
+
 	$(window).load(function() {
 		$('#slider').nivoSlider();
 	});
 </script>
-<script>
-	$(window).load(function() {
-		$('#slider2').nivoSlider();
-	});
-</script>
+<div id="header2">
+</div>
 
 <div id="container" ><center>
 <div id="header" >

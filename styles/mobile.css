@@ -1,0 +1,23 @@
+.slicknav_menu {
+	display:none;
+}
+#header2 {
+	display: none;
+}
+@media screen and (max-width: 1024px) {
+	#header {
+		display: none; 
+}
+
+	#header2 {
+		display: block;
+}
+	#container {
+		margin-top: 50px !important; 
+}
+
+@media screen and (max-width: 748px) {
+	.dl-menuwrapper {
+		max-width: 200px !important;
+	}
+}

@@ -6,16 +6,17 @@
 </head>
 
 <body><center>
-<div id="logo"
-<a href="http://www.arpcem.com"><img src="https://raw.github.com/zepha317/CEM4/master/images/logos/CEMlogo.png" width="250px" border="0" style="margin-bottom:15px;"/></a>
+
+<div id="logo">
+<a href="http://www.arpcem.com"><img src="https://raw.github.com/zepha317/CEM4/master/images/logos/CEMlogo.png" width="100%" border="0"/></a>
 </div>
 <div id="navigationbar">
-<ul id="nav"> 
+<ul id="menu2"> 
 			<li> 
 				<a href="file:///C|/Users/Becca-Tower/Desktop/CEM4/index.html" class="bottom">Home</a>
 			</li>
 			<li class="dropdown">
-				<a class="bottom">About <span><img src="https://raw.github.com/zepha317/CEM4/master/images/buttons/arrow.png" width="10px" style="margin-left:10px;" class="imgarrow"/> </span></a>
+				<a class="bottom">About <span><img src="https://raw.github.com/zepha317/CEM4/master/images/buttons/arrow.png" width="8px" style="margin-left:8px;" class="imgarrow"/> </span></a>
                     <ul class="sub-menu">
 					<li>
 						<a href="../about_pages/arpchurch.html" class="navbar" >ARP Church</a>
@@ -32,7 +33,7 @@
 				</ul>
 			</li>
 			<li class="dropdown">
-				<a class="bottom">Resources <span><img src="https://raw.github.com/zepha317/CEM4/master/images/buttons/arrow.png" width="10px" style="margin-left:10px;" class="imgarrow"/> </span></a>
+				<a class="bottom">Resources <span><img src="https://raw.github.com/zepha317/CEM4/master/images/buttons/arrow.png" width="8px" style="margin-left:8px;" class="imgarrow"/> </span></a>
 				<ul class="sub-menu">
 					<li>
 						<a href="../resource_pages/findarpchurch.html" class="navbar">Find an ARP Church</a>
@@ -48,7 +49,7 @@
 				</li></ul>
 			</li>
 			<li class="dropdown">
-				<a class="bottom">Training <span><img src="https://raw.github.com/zepha317/CEM4/master/images/buttons/arrow.png" width="10px" style="margin-left:10px;" class="imgarrow"/> </span></a>
+				<a class="bottom">Training <span><img src="https://raw.github.com/zepha317/CEM4/master/images/buttons/arrow.png" width="8px" style="margin-left:8px;" class="imgarrow"/> </span></a>
 				<ul class="sub-menu">
 					<li>
 						<a href="../training_pages/disciplemakers.html" class="navbar">Disciple Makers</a>
@@ -65,7 +66,7 @@
 				</ul>
 			</li>
 			<li class="dropdown">
-				<a class="bottom">Conferences <span><img src="https://raw.github.com/zepha317/CEM4/master/images/buttons/arrow.png" width="10px" style="margin-left:10px;" class="imgarrow"/> </span></a>
+				<a class="bottom">Conferences <span><img src="https://raw.github.com/zepha317/CEM4/master/images/buttons/arrow.png" width="8px" style="margin-left:8px;" class="imgarrow"/> </span></a>
 				<ul class="sub-menu">
 					<li>
 						<a href="../conference_pages/appalachia.html" class="navbar">Appalachia</a>
@@ -95,30 +96,14 @@
             </li>
 		</ul>
         </div>
-<script>
+<script type="text/javascript">
 
-var url = window.location; // get current URL
-$('#nav a[href="'+url+'"]').addClass('active');
-
-var $activeUL = $('.active').closest('ul');
-/*
-Revise below condition that tests if .active is a submenu
-*/
-if($activeUL.attr('id') != 'nav') { //check if it is submenu
-    $activeUL
-        .parent() //This should return the li
-        .children('a') //The childrens are <a> and <ul>
-        .addClass('active'); //add class active to the a    
-}
-
-
-$(document).click(function() {
-    showDropDown(null);
-	$(".bottom").delay(400).queue(function(next){
-			$(this).css('border-bottom', 'none');
-			next();
+$(document).click(function(event) {
+	showDropDown(null);
+$(".bottom").delay(350).queue(function(next){
+		$(this).css('border-bottom', 'none');
+		next();
 		});
-	
 });
 
 $(".dropdown").click(function(event) {
@@ -151,7 +136,9 @@ var showDropDown = function(object) {
 	$(currentborder).css('border-bottom', '1px solid red');
     }
 }
+
 </script>
+
 
 </body>
 </html>
