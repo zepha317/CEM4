@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#newsfield {
+	width:70%;
+	height:22px;
+	line-height:15px;
+	text-indent: 10px;
+	font-family: arial, sans-serif;
+	font-size: 8pt;
+	color: #333;
+	background: #fff;
+	border: solid 1px #d9d9d9;
+	border-top:solid 1px #c0c0c0;
+	border-right: none;
+	margin-right:5px;
+}
+#newssubmit {
+	cursor: pointer;
+	width:15%;
+	height: 25px;
+	line-height: 15px;
+	font-family: arial, sans-serif;
+	font-size: 8pt;
+	font-weight:bold;
+	color: #fff;
+	background: #CCC;
+	border: 1px solid #666;
+	-moz-border-radius:2px;
+	-webkit-border-radius: 2px;
+}
+#newssubmit:hover {
+	border: 1px solid #000;
+	font-family: airal, sans-serif;
+	font-weight:bold;
+	color: #fff;
+	background: #333;
+}

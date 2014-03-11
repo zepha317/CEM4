@@ -1,0 +1,76 @@
+#nav {
+	position: relative;
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	margin-top: 15px;
+	list-style: none;
+	background: transparent;
+	text-align: center;
+	z-index: 104;
+}
+ 
+#nav li {
+	display: inline;
+}
+ 
+#nav li a {
+	width: 14.285714%;
+	float: left;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 17px;
+	font-weight: 500;
+	text-transform: capitalize;
+	line-height: 40px;
+	color: #452D16;
+	text-decoration: none;
+	margin: 0;
+	padding:0; 
+	background-image: url("../images/backgrounds/white_wall_hash.png");
+}
+#nav > li:hover > a{
+	color: #617D4B;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#nav ul {
+	display: none;
+	position: absolute;
+	top:45px;
+	width: 96.5%;
+	height: 50px;
+	background-image:url("../images/backgrounds/white_wall_hash.png");
+	text-align: center;
+	vertical-align: middle;
+	margin: 0 0 0 0;
+	border-bottom: 1px solid #617d4b;
+	z-index: 103;
+}
+ 
+#nav ul li a {
+	float: left;
+	width: auto;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 45px;
+	color: #452D16;
+	text-decoration: none;
+	margin: 0;
+	padding: 0 30px 0 0;
+	background-image:url("../images/backgrounds/white_wall_hash.png");
+}
+ 
+#nav ul li a:hover {
+	color: #617D4B;
+	text-decoration: underline;
+	text-shadow: none;
+}
+
+.active {
+	color: #617d4b;
+	text-decoration: none;
+}

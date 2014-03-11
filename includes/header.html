@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Header</title>
+</head>
+
+<body><center>
+<a href="http://www.arpcem.com"><img src="file:///C|/Users/Becca-Tower/Desktop/CEM4/images/logos/CEMlogo.png" width="250px" border="0" style="margin-bottom:15px;"/></a>
+<div id="contain">
+<ul id="nav"> 
+			<li> 
+				<a href="file:///C|/Users/Becca-Tower/Desktop/CEM4/index.html" class="bottom">Home</a>
+			</li>
+			<li class="dropdown">
+				<a class="bottom">About <span><img src="file:///C|/Users/Becca-Tower/Desktop/CEM4/images/buttons/arrow.png" width="10px" style="margin-left:10px;" class="imgarrow"/> </span></a>
+                    <ul class="sub-menu">
+					<li>
+						<a href="../about_pages/arpchurch.html" class="navbar" >ARP Church</a>
+					</li>
+					<li>
+						<a href="file:///C|/Users/Becca-Tower/Desktop/CEM4/about_pages/mission.html" class="navbar">Our Mission</a>
+					</li>
+					<li>
+						<a href="../about_pages/cemhelp.html" class="navbar" >How CEM helps you</a>
+					</li>
+					<li>
+						<a href="../about_pages/staff.html" class="navbar">Our Staff</a>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="bottom">Resources <span><img src="file:///C|/Users/Becca-Tower/Desktop/CEM4/images/buttons/arrow.png" width="10px" style="margin-left:10px;" class="imgarrow"/> </span></a>
+				<ul class="sub-menu">
+					<li>
+						<a href="../resource_pages/findarpchurch.html" class="navbar">Find an ARP Church</a>
+					</li>
+					<li>
+						<a href="../resource_pages/newsletter.html" class="navbar">Newsletter</a>
+					</li>
+					<li>
+						<a href="http://www.arpbookstore.com/" class="navbar">ARP Bookstore</a>
+					</li>
+					<li>
+						<a href="../resource_pages/recommendedpublishers.html" class="navbar">Recommended Publishers</a>
+				</li></ul>
+			</li>
+			<li class="dropdown">
+				<a class="bottom">Training <span><img src="file:///C|/Users/Becca-Tower/Desktop/CEM4/images/buttons/arrow.png" width="10px" style="margin-left:10px;" class="imgarrow"/> </span></a>
+				<ul class="sub-menu">
+					<li>
+						<a href="../training_pages/disciplemakers.html" class="navbar">Disciple Makers</a>
+					</li>
+					<li>
+						<a href="../training_pages/elderdeacon.html" class="navbar">Elder and Deacon</a>
+					</li>
+					<li>
+						<a href="../training_pages/parents.html" class="navbar">Parenting</a>
+					</li>
+					<li>
+						<a href="../training_pages/seminars.html" class="navbar">Seminars</a>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="bottom">Conferences <span><img src="file:///C|/Users/Becca-Tower/Desktop/CEM4/images/buttons/arrow.png" width="10px" style="margin-left:10px;" class="imgarrow"/> </span></a>
+				<ul class="sub-menu">
+					<li>
+						<a href="../conference_pages/appalachia.html" class="navbar">Appalachia</a>
+					</li>
+					<li>
+						<a href="../conference_pages/campjoy.html" class="navbar">Camp Joy</a>
+					</li>
+					<li>
+						<a href="../conference_pages/capstone.html" class="navbar">Capstone</a>
+					</li>
+					<li>
+						<a href="../conference_pages/fbc.html" class="navbar">Family Bible Conference</a>
+					</li>
+					<li>
+						<a href="../conference_pages/horizon.html" class="navbar">Horizon</a>
+					</li>
+					<li>
+						<a href="../conference_pages/quest.html" class="navbar">Quest</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="../contact_us.html" class="bottom">Contact Us</a>
+			</li>
+            <li>
+            	<a href="" class="bottom">Donate</a>
+            </li>
+		</ul>
+        </div>
+<script>
+
+var url = window.location; // get current URL
+$('#nav a[href="'+url+'"]').addClass('active');
+
+var $activeUL = $('.active').closest('ul');
+/*
+Revise below condition that tests if .active is a submenu
+*/
+if($activeUL.attr('id') != 'nav') { //check if it is submenu
+    $activeUL
+        .parent() //This should return the li
+        .children('a') //The childrens are <a> and <ul>
+        .addClass('active'); //add class active to the a    
+}
+
+
+$(document).click(function() {
+    showDropDown(null);
+	$(".bottom").delay(400).queue(function(next){
+			$(this).css('border-bottom', 'none');
+			next();
+		});
+	
+});
+
+$(".dropdown").click(function(event) {
+    showDropDown(this);
+	
+    event.stopPropagation();
+});
+
+var showDropDown = function(object) {
+    $(".dropdown").each(function(i, element) {
+        var submenu = $(element).children(".sub-menu");
+	var arrow = $(element).contents().find(".imgarrow");
+        if(!$(submenu).is(":hidden")) {
+            $(submenu).slideUp(400);
+		$(arrow).attr("src","file:///C|/Users/Becca-Tower/Desktop/CEM4/images/buttons/arrow.png");
+
+        }
+
+    });
+	
+	
+    if(object != null) {
+	var currentborder = $(object).contents().find(".bottom");
+        $(object).children(".sub-menu").delay(250).slideDown(600);
+	$(object).contents().find(".imgarrow").attr("src","file:///C|/Users/Becca-Tower/Desktop/CEM4/images/buttons/arrowdown.png");
+	$(".bottom").delay(250).queue(function(next){
+		$(this).css('border-bottom', '1px solid #617d4b');
+		next();
+		});
+	$(currentborder).css('border-bottom', '1px solid red');
+    }
+}
+</script>
+
+</body>
+</html>
